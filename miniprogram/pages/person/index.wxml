@@ -1,0 +1,41 @@
+<view class="personbox">
+    <view class="topbox mcenter flexdcolu" hover-class="none" hover-stop-propagation="false">
+        <view class="userimgbox">
+            <image class="userimg" src="../image/head.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">  
+            </image> 
+        </view>
+        <view class="username pd5">
+            那双眼动人
+        </view>
+    </view>
+    <view class="rankingbox" hover-class="none" hover-stop-propagation="false">
+    <view class="rankingfriend mcenter flexdcolu" hover-class="none" hover-stop-propagation="false">
+        <text class="num">5</text><text class="mtext">好友排名</text>
+    </view>    
+    <view class="rankingword mcenter flexdcolu" hover-class="none" hover-stop-propagation="false">
+        <text class="num">0</text><text class="mtext">宇宙排名</text>
+    </view> 
+</view>
+<view class="mcenter pd10"  hover-stop-propagation="false">
+    <text>赢</text><text class="numcolor">5次</text><text>输</text><text class="numcolor">3次</text><text>胜率</text><text class="numcolor">36.33%</text><text>战绩></text>
+</view>
+
+<view class="mcenter"  hover-stop-propagation="false">
+    <button class="default" size="default" type="default" plain="default" disabled="false"  
+    hover-class="button-hover" hover-stop-propagation="false" 
+     form-type="submit|reset"  >
+    我要开房
+    </button>
+    <button class="default" size="default" type="default" plain="default" disabled="false"  
+    hover-class="button-hover" hover-stop-propagation="false" 
+     form-type="submit|reset"  >
+    扫码进房
+    </button>
+</view>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <text>客服</text>
+    <text>获取头像昵称</text>
+    <text>使用手册</text>
+</view>
+</view>
+  
