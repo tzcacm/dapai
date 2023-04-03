@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/home/index",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/person/index"
   
   ],
@@ -16,7 +16,7 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/home/index",
       "text": "支出"
     }, {
       "pagePath": "pages/person/index",
