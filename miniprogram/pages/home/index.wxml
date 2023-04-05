@@ -8,12 +8,12 @@
     <view class="options box">
         <view class="option-item link" bindtap="toOptionDetail">
             <image src="/assets/image/head.png" mode="widthFix"></image>
-            <text>我要开房</text>
+            <text>创建房间</text>
         </view>
         <view class="separator"></view>
-        <view class="option-item link" bindtap="toShareDetail">
+        <view class="option-item link" bindtap="toRoomDetail">
             <image src="/assets/image/head.png" mode="widthFix"></image>
-            <text>扫码进房</text>
+            <text>加入房间</text>
         </view>
     </view>
     <view class="why-us box">
@@ -40,5 +40,41 @@
                 <text>财源广进</text>
             </view>
         </view>
+    </view>
+    <!-- 车牌号码 -->
+    <view class="comboPop" wx:if="{{isShowRoomNumber}}">
+      <view class="combgz" catchtouchmove='true' bindtap="closeShowCartNumber" wx:if="{{isShowRoomNumber}}"></view>
+      <view class="comContents {{fadeshow?'fadeInUpBig':'fadeOutDownBig'}}" style="animation-duration: 0.3s;" catchtouchmove='true'>
+        <view class="cartNumber-container">
+          <view class="cartNumber-input">
+            <view class="cartNumber-title {{ roomIndex == '0' ? 'active':''}}">
+              {{roomNumber[0]}}
+            </view>
+            <view class="cartNumber-title {{ roomIndex == '1' ? 'active':''}}">
+              {{roomNumber[1]}}
+            </view>
+            <view class="cartNumber-title {{ roomIndex == '2' ? 'active':''}}">
+              {{roomNumber[2]}}
+            </view>
+            <view class="cartNumber-title {{ roomIndex == '3' ? 'active':''}}">
+              {{roomNumber[3]}}
+            </view>
+          </view>
+          <view class="cartNumber-list">
+            <view class="cartNumber-list-items" wx:for="{{roomListArr}}" wx:key="{{index}}" bindtap="getLicenseNumber" data-value="{{item}}">
+              {{item}}
+            </view>
+          </view>
+          <view class="cartNumber-tool">
+            <view class="cartNumber-btm" bindtap="cacelRoomDetail">取消</view>
+            <view class="cartNumber-success">
+              <view class="cartNumber-btm mr16" bindtap="delCartLicenseNumber">删除</view>
+              <view class="cartNumber-btm blue {{licenseDisabled ? 'disabled' :''}}" bindtap="successShowCartNumber">
+                完成
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
 </view>
