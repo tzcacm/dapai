@@ -1,5 +1,5 @@
 <view class="personContainer">
-    <view class="header" bindtap="getUserInfo">
+    <view class="header" bindtap="getUserInfoData">
         <image class="images" src="{{userInfo.avatarUrl || '/assets/image/head.png'}}"></image>
         <view class="title">{{userInfo.nickname || '获取信息'}}</view>
     </view>
