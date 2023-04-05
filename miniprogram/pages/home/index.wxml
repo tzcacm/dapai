@@ -21,18 +21,23 @@
         <view class="intro-list">
             <view class="intro-item">
                 <image mode="widthFix" src="/assets/image/head.png"></image>
-                <view>快</view>
-                <text>快速</text>
+                <view>恭</view>
+                <text>花开富贵</text>
             </view>
             <view class="intro-item">
                 <image mode="widthFix" src="/assets/image/head.png"></image>
-                <view>准</view>
-                <text>准确</text>
+                <view>喜</view>
+                <text>双喜临门</text>
             </view>
             <view class="intro-item">
                 <image mode="widthFix" src="/assets/image/head.png"></image>
-                <view>狠</view>
-                <text>狠辣</text>
+                <view>发</view>
+                <text>红红火火</text>
+            </view>
+            <view class="intro-item">
+                <image mode="widthFix" src="/assets/image/head.png"></image>
+                <view>财</view>
+                <text>财源广进</text>
             </view>
         </view>
     </view>
