@@ -1,41 +1,57 @@
-<view class="personbox">
-    <view class="topbox mcenter flexdcolu" hover-class="none" hover-stop-propagation="false">
-        <view class="userimgbox">
-            <image class="userimg" src="../image/head.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">  
-            </image> 
-        </view>
-        <view class="username pd5">
-            那双眼动人
+<view class="personContainer">
+    <view class="header" bindtap="getUserInfo">
+        <image class="images" src="{{userInfo.avatarUrl || '/assets/image/head.png'}}"></image>
+        <view class="title">{{userInfo.nickname || '获取信息'}}</view>
+    </view>
+    <view class="content">
+        <view class="shopInfo">
+            <view>高级牌友</view>
+            <view class="earnings">我的战绩</view>
         </view>
     </view>
-    <view class="rankingbox" hover-class="none" hover-stop-propagation="false">
-    <view class="rankingfriend mcenter flexdcolu" hover-class="none" hover-stop-propagation="false">
-        <text class="num">5</text><text class="mtext">好友排名</text>
-    </view>    
-    <view class="rankingword mcenter flexdcolu" hover-class="none" hover-stop-propagation="false">
-        <text class="num">0</text><text class="mtext">宇宙排名</text>
-    </view> 
+    <view class="commonly">
+        <view class="commonlyTitle">常用功能</view>
+        <view class="commonlyList link" bindtap="toContact">
+            <view class="commonlyLeft">
+                <view class="iconImg">
+                    <image src="/assets/image/head.png"></image>
+                </view>
+                <view class="commonlyText">联系客服</view>
+            </view>
+            <view class="torightIcon">
+                <image src="/assets/image/toright.png"></image>
+            </view>
+        </view>
+        <view class="commonlyList link" bindtap="toAbout">
+            <view class="commonlyLeft">
+                <view class="iconImg">
+                    <image src="/assets/image/head.png"></image>
+                </view>
+                <view class="commonlyText">关于我们</view>
+            </view>
+            <view class="torightIcon">
+                <image src="/assets/image/toright.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="wxLoginModal" wx:if="{{showLoginBox}}">
+        <view class="zbcBgFixed" catchtouchmove='true' bindtap="cancelPush"></view>
+        <view class="fixedItem ">
+            <view class="loginItem {{animation==false? 'bounceIn':'bounceOut'}}">
+                <view class="loginContent">
+                    <view class="titleTips">温馨提示</view>
+                    <view class="topBgImgs">
+                        <image src="/assets/image/head.png"></image>
+                    </view>
+                    <view class="itemInfoLogin">
+                        <view class="TipsText">牌友记分需要获取您的微信授权</view>
+                        <view class="tipLoginBtnBox">
+                            <view class="cancelLogin" bindtap="cancelPush">拒绝</view>
+                            <button class="sureLogin" bindtap="surePushTwo">允许</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
-<view class="mcenter pd10"  hover-stop-propagation="false">
-    <text>赢</text><text class="numcolor">5次</text><text>输</text><text class="numcolor">3次</text><text>胜率</text><text class="numcolor">36.33%</text><text>战绩></text>
-</view>
-
-<view class="mcenter"  hover-stop-propagation="false">
-    <button class="default" size="default" type="default" plain="default" disabled="false"  
-    hover-class="button-hover" hover-stop-propagation="false" 
-     form-type="submit|reset"  >
-    我要开房
-    </button>
-    <button class="default" size="default" type="default" plain="default" disabled="false"  
-    hover-class="button-hover" hover-stop-propagation="false" 
-     form-type="submit|reset"  >
-    扫码进房
-    </button>
-</view>
-<view class="" hover-class="none" hover-stop-propagation="false">
-    <text>客服</text>
-    <text>获取头像昵称</text>
-    <text>使用手册</text>
-</view>
-</view>
-  

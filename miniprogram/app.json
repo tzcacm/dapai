@@ -3,25 +3,35 @@
     "pages/home/index",
     "pages/index/index",
     "pages/person/index"
-  
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "牌友记分",
-    "navigationBarTextStyle": "black"
-    
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
+  },
+  "usingComponents": {
+    "cu-custom": "/components/cuCustom/index",
+    "base-page": "/components/basePage/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/home/index",
-      "text": "支出"
-    }, {
-      "pagePath": "pages/person/index",
-      "text": "结算"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/assets/image/tabbar/home.png",
+        "selectedIconPath": "/assets/image/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/person/index",
+        "text": "个人",
+        "iconPath": "/assets/image/tabbar/user.png",
+        "selectedIconPath": "/assets/image/tabbar/user-active.png"
+      }
+    ]
   }
-
 }

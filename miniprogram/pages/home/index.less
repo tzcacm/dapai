@@ -1,35 +1,87 @@
 /* pages/home/index.wxss */
+page {
+    background-color: #FBFBFB;
+}
 
-.banner {
-    border-radius: 10rpx;
-    border: none;
-    box-sizing: content-box;
-    padding: 20rpx 0;
-    width: 90%;
-    height: 370rpx;
-    margin: 20rpx auto;
-    background:linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
-    /* background-image:image("../../images/cloudbg.jpg"); */
+.container:not(.hold) {
+    transition: margin-top .3s 0s ease;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    padding: 38rpx 0;
+}
+
+.box {
+    margin: 24rpx;
+    background: #FFFFFF;
+    box-shadow: 0px 10rpx 20rpx 0px rgba(223, 223, 223, 0.2);
+    border-radius: 16rpx;
+    margin-top: 0;
+    position: relative;
+}
+
+.option-item {
+    width: 50%;
     text-align: center;
 }
- 
-.topContainer {
-    width: 100%;
-    height: 260rpx;
-    background-size: 100%;
-    border-radius: 9px;
+
+.option-item image {
+    width: 29.333vw;
+    height: 34.666vw;
 }
-.userinfo-nickname {
-    color:black;
+
+.option-item text {
+    display: block;
+    color: #ccc;
+    font-size: 22rpx;
+    margin-top: 10rpx;
 }
-.userLogin{
-    width: 50%;
-    box-sizing: none;
-    font-size: medium;
+
+.options .separator {
+    width: 1rpx;
+    height: 29.333vw;
+    margin-top: 2.665vw;
+    background: #F2F4FA;
 }
-.userinfo-avatar {
-    width: 150rpx;
-    height: 150rpx;
-    margin-bottom: 10rpx;
-    border-radius: 50%;
+
+.why-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-us image.title {
+    width: 58vw;
+    height: 4.5333vw;
+    margin: 46rpx auto;
+}
+
+.intro-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70rpx;
+}
+
+.intro-item {
+    text-align: center;
+    width: 25vw;
+}
+
+.intro-item image {
+    width: 11.7333vw;
+    height: 11.7333vw;
+}
+
+.intro-item view {
+    font-weight: bold;
+    padding: 0;
+    padding-top: 10rpx;
+}
+
+.intro-item text {
+    display: block;
+    font-size: 24rpx;
+    color: #909090;
+    margin-top: 18rpx;
 }

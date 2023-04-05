@@ -8,8 +8,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    banners: [
+      { image: '/assets/image/head.png' }
+    ],
     userinfo: {
-      avatarUrl: '../../images/ckbg1.png',
+      avatarUrl: '',
       nickName: '未授权'
     },
     hasUserInfo: false,
@@ -26,6 +29,8 @@ Page({
       console.log(data)
     })
   },
+
+  toOptionDetail() { },
 
   showBcgImgArea() {
 

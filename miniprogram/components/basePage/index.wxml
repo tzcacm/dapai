@@ -1,0 +1,41 @@
+<!-- components/base-page.wxml -->
+<view class="pf-100 df-col base-page" style="background-color:{{bgColor}};background-image:url({{bgImg}});" bindtouchstart='start' bindtouchend='end' bindtouchmove='move'>
+  <slot name="header"></slot>
+  <view class="center">
+    <view class="loadingStyle" wx:if="{{showLoading==true}}">
+      <loading backgroundPb="{{backgroundPb}}"></loading>
+    </view>
+    <scroll-view scroll-y="true" class="height-100" :upper-threshold="scrollOptions.upperThreshold" :lower-threshold="scrollOptions.lowerThreshold" bindscrolltoupper="upperFn" bindscrolltolower="lowerFn" bindscroll="scrollFn" scroll-with-animation="true" scroll-top='{{topNum}}' wx:else>
+      <view wx:if="{{refreshShow==true}}">
+        <view>
+          <view style='height:{{hei}}px;background:{{backgroundrefresh}};transition: height 0.2s;' class='refresh'>
+            <view wx:if="{{loadingShow==true&&hei>=50}}">
+              <loading backgroundPb="{{backgroundPb}}"></loading>
+            </view>
+          </view>
+          <slot name="center"></slot>
+        </view>
+      </view>
+      <view wx:else>
+        <slot name="center"></slot>
+      </view>
+    </scroll-view>
+    <to-top wx:if="{{isShowToTop}}" bind:toTop="toTop"></to-top>
+  </view>
+  <slot name="bottom"></slot>
+</view>
+<!-- <scroll-view scroll-y="true" class="height-100" :upper-threshold="scrollOptions.upperThreshold" :lower-threshold="scrollOptions.lowerThreshold" bindscrolltoupper="upperFn" bindscrolltolower="lowerFn" bindscroll="scrollFn" scroll-with-animation="true" scroll-top='{{topNum}}' wx:if="{{showLoading==false}}">
+  <view wx:if="{{refreshShow==true}}">
+    <view>
+      <view wx:if="{{loadingShow==true}}" style='height:{{hei}}px;background:{{backgroundrefresh}};transition: {{hei}} ease-out 0.2s;' class='refresh'>
+        <view>
+          <loading backgroundPb="{{backgroundPb}}"></loading>
+        </view>
+      </view>
+      <slot name="center"></slot>
+    </view>
+  </view>
+  <view wx:else>
+    <slot name="center"></slot>
+  </view>
+</scroll-view> -->

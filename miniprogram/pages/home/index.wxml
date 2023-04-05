@@ -1,6 +1,42 @@
 <!-- pages/home/index.wxml -->
-<view class="banner">
-    <view class="topContainer">
+<view class="container">
+    <swiper autoplay="true" easing-function="easeInOutCubic" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#fff" circular="true">
+        <swiper-item class="link" data-option="0" wx:for="{{banners}}">
+            <image src="{{item.image}}"></image>
+        </swiper-item>
+    </swiper>
+    <view class="options box">
+        <view class="option-item link" bindtap="toOptionDetail" data-option="0">
+            <image src="/assets/image/head.png" mode="widthFix"></image>
+            <text>我要开房</text>
+        </view>
+        <view class="separator"></view>
+        <view class="option-item link" bindtap="toOptionDetail" data-option="1">
+            <image src="/assets/image/head.png" mode="widthFix"></image>
+            <text>扫码进房</text>
+        </view>
+    </view>
+    <view class="why-us box">
+        <image mode="widthFix" src="/assets/image/why-us.png" class="title"></image>
+        <view class="intro-list">
+            <view class="intro-item">
+                <image mode="widthFix" src="/assets/image/head.png"></image>
+                <view>快</view>
+                <text>快速</text>
+            </view>
+            <view class="intro-item">
+                <image mode="widthFix" src="/assets/image/head.png"></image>
+                <view>准</view>
+                <text>准确</text>
+            </view>
+            <view class="intro-item">
+                <image mode="widthFix" src="/assets/image/head.png"></image>
+                <view>狠</view>
+                <text>狠辣</text>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="topContainer">
         <view catchtap="showBcgImgArea">
             <image class="userinfo-avatar" mode="aspectFill" src="{{userinfo.avatarUrl}}"></image>
         </view>
@@ -10,5 +46,5 @@
     </view>
     <button wx:if="{{!hasUserInfo && canIUseGetUserProfile}}" open-type="getUserInfo" bindtap="getUserProfile" class="userLogin">
         点击登录
-    </button>
+    </button> -->
 </view>
